@@ -48,8 +48,15 @@ def main():
     dataset = load_dataset('json', data_files='touchefallacy_2026_train.jsonl')
 
     # 2. Prepare splits (80/10/10)
+    # Encode labels first so 'label' exists when stratify_by_column is called
+    def encode_label(examples):
+        examples['label'] = LABEL2ID[examples['fallacy_type']]
+        return examples
+
+    encoded = dataset['train'].map(encode_label)
+
     # First split into 80% train and 20% temp
-    train_test_split = dataset['train'].train_test_split(test_size=0.2, seed=42, stratify_by_column='label')
+    train_test_split = encoded.train_test_split(test_size=0.2, seed=42, stratify_by_column='label')
     # Split the 20% temp into 50% validation and 50% test (results in 10% each of total)
     test_val_split = train_test_split['test'].train_test_split(test_size=0.5, seed=42, stratify_by_column='label')
 
@@ -67,13 +74,7 @@ def main():
         # Using 'text_base' as input and 'fallacy_type' as label
         return tokenizer(examples['text_base'], truncation=True, padding=True)
 
-    # Map string fallacy type labels to integer ids as expected by Trainer
-    def encode_label(examples):
-        examples['label'] = LABEL2ID[examples['fallacy_type']]
-        return examples
-
-    tokenized_datasets = raw_datasets.map(encode_label)
-    tokenized_datasets = tokenized_datasets.map(tokenize_function, batched=True)
+    tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
 
     # Remove all original columns except 'label' (which we just added)
     cols_to_remove = [c for c in raw_datasets['train'].column_names if c != 'label']
