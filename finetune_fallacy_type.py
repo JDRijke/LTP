@@ -13,7 +13,7 @@ from sklearn.metrics import precision_recall_fscore_support, accuracy_score, cla
 # The 8 fallacy types the model will learn to distinguish
 FALLACY_TYPES = [
     "authority",
-    "black-white",
+    "blackwhite",
     "hasty_generalization",
     "natural",
     "population",
@@ -49,11 +49,13 @@ def main():
 
     # 2. Prepare splits (80/10/10)
     # Encode labels first so 'label' exists when stratify_by_column is called
+    # Filter out rows where fallacy_type is missing (not a fallacy example)
     def encode_label(examples):
         examples['label'] = LABEL2ID[examples['fallacy_type']]
         return examples
 
-    encoded = dataset['train'].map(encode_label)
+    filtered = dataset['train'].filter(lambda x: x['fallacy_type'] is not None)
+    encoded = filtered.map(encode_label)
 
     # First split into 80% train and 20% temp
     train_test_split = encoded.train_test_split(test_size=0.2, seed=42, stratify_by_column='label')
