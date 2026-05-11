@@ -1,5 +1,5 @@
 import numpy as np
-from datasets import load_dataset, DatasetDict
+from datasets import load_dataset, DatasetDict, ClassLabel
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -56,6 +56,9 @@ def main():
 
     filtered = dataset['train'].filter(lambda x: x['fallacy_type'] is not None)
     encoded = filtered.map(encode_label)
+
+    # Cast 'label' to ClassLabel so stratify_by_column works
+    encoded = encoded.cast_column('label', ClassLabel(names=FALLACY_TYPES))
 
     # First split into 80% train and 20% temp
     train_test_split = encoded.train_test_split(test_size=0.2, seed=42, stratify_by_column='label')
