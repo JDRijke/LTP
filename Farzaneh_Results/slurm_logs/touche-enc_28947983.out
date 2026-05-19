@@ -1,0 +1,64 @@
+Splits — train=371 val=47 internal-test=47
+{'loss': '2.114', 'grad_norm': '10.81', 'learning_rate': '1.31e-05', 'epoch': '0.8333'}
+{'eval_loss': '2.078', 'eval_macro_f1': '0.09441', 'eval_weighted_f1': '0.1019', 'eval_macro_precision': '0.1437', 'eval_macro_recall': '0.1488', 'eval_runtime': '0.2035', 'eval_samples_per_second': '231', 'eval_steps_per_second': '9.829', 'epoch': '1'}
+{'loss': '2.053', 'grad_norm': '16.49', 'learning_rate': '1.923e-05', 'epoch': '1.667'}
+{'eval_loss': '1.884', 'eval_macro_f1': '0.2351', 'eval_weighted_f1': '0.2448', 'eval_macro_precision': '0.2452', 'eval_macro_recall': '0.3304', 'eval_runtime': '0.0819', 'eval_samples_per_second': '573.7', 'eval_steps_per_second': '24.41', 'epoch': '2'}
+{'loss': '1.743', 'grad_norm': '19.14', 'learning_rate': '1.768e-05', 'epoch': '2.5'}
+{'eval_loss': '1.239', 'eval_macro_f1': '0.6165', 'eval_weighted_f1': '0.6296', 'eval_macro_precision': '0.6261', 'eval_macro_recall': '0.6256', 'eval_runtime': '0.0819', 'eval_samples_per_second': '574.1', 'eval_steps_per_second': '24.43', 'epoch': '3'}
+{'loss': '1.191', 'grad_norm': '35.02', 'learning_rate': '1.614e-05', 'epoch': '3.333'}
+{'eval_loss': '0.9314', 'eval_macro_f1': '0.685', 'eval_weighted_f1': '0.7023', 'eval_macro_precision': '0.72', 'eval_macro_recall': '0.7042', 'eval_runtime': '0.0809', 'eval_samples_per_second': '580.7', 'eval_steps_per_second': '24.71', 'epoch': '4'}
+{'loss': '0.7548', 'grad_norm': '12.54', 'learning_rate': '1.459e-05', 'epoch': '4.167'}
+{'loss': '0.372', 'grad_norm': '10.41', 'learning_rate': '1.305e-05', 'epoch': '5'}
+{'eval_loss': '0.7243', 'eval_macro_f1': '0.6897', 'eval_weighted_f1': '0.7026', 'eval_macro_precision': '0.7463', 'eval_macro_recall': '0.7042', 'eval_runtime': '0.0752', 'eval_samples_per_second': '625.4', 'eval_steps_per_second': '26.61', 'epoch': '5'}
+{'loss': '0.1458', 'grad_norm': '18.25', 'learning_rate': '1.151e-05', 'epoch': '5.833'}
+{'eval_loss': '0.6889', 'eval_macro_f1': '0.7857', 'eval_weighted_f1': '0.7971', 'eval_macro_precision': '0.818', 'eval_macro_recall': '0.7917', 'eval_runtime': '0.0805', 'eval_samples_per_second': '584', 'eval_steps_per_second': '24.85', 'epoch': '6'}
+{'loss': '0.06433', 'grad_norm': '0.842', 'learning_rate': '9.961e-06', 'epoch': '6.667'}
+{'eval_loss': '0.7852', 'eval_macro_f1': '0.7385', 'eval_weighted_f1': '0.7489', 'eval_macro_precision': '0.7857', 'eval_macro_recall': '0.75', 'eval_runtime': '0.0834', 'eval_samples_per_second': '563.9', 'eval_steps_per_second': '24', 'epoch': '7'}
+{'loss': '0.01982', 'grad_norm': '0.456', 'learning_rate': '8.417e-06', 'epoch': '7.5'}
+{'eval_loss': '0.8413', 'eval_macro_f1': '0.7676', 'eval_weighted_f1': '0.7839', 'eval_macro_precision': '0.8321', 'eval_macro_recall': '0.7875', 'eval_runtime': '0.0809', 'eval_samples_per_second': '580.8', 'eval_steps_per_second': '24.72', 'epoch': '8'}
+
+###############################################################################
+Hábrók Cluster
+Job 28947983 for user s6207529
+Finished at: Tue May 19 11:17:19 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 28947983
+Name                           : touche-enc
+User                           : s6207529
+Partition                      : gpushort
+Nodes                          : a100gpu6
+Number of Nodes                : 1
+Cores                          : 8
+Number of Tasks                : 1
+State                          : FAILED  
+Submit                         : 2026-05-19T11:12:15
+Start                          : 2026-05-19T11:12:18
+End                            : 2026-05-19T11:17:15
+Reserved walltime              : 04:00:00
+Used walltime                  : 00:04:57
+Used CPU time                  : 00:01:23 (Efficiency:  3.51%)
+% User (Computation)           : 63.32%
+% System (I/O)                 : 36.68%
+Total memory reserved          : 64G
+Maximum memory used            : 14.96G
+Requested GPUs                 : 1
+Allocated GPUs                 : a100=1
+Max GPU utilization            : 27%
+Max GPU memory used            : 10.43G
+Hints and tips      :
+ 1) You requested much more CPU memory than your program used.
+    Please reduce the requested amount of memory.
+ *) For more information on these issues see:
+    https://wiki.hpc.rug.nl/habrok/additional_information/job_hints
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

@@ -1,0 +1,24 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+/var/spool/slurmd/job28948381/slurm_script: line 30: /home5/s6207529/envs/touche2026/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home5/s6207529/touche2026/src/train_encoder.py", line 29, in <module>
+    from sklearn.metrics import classification_report, f1_score, precision_recall_fscore_support
+  File "/home5/s6207529/.local/lib/python3.11/site-packages/sklearn/__init__.py", line 73, in <module>
+    from .base import clone  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home5/s6207529/.local/lib/python3.11/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "/home5/s6207529/.local/lib/python3.11/site-packages/sklearn/utils/__init__.py", line 9, in <module>
+    from ._chunking import gen_batches, gen_even_slices
+  File "/home5/s6207529/.local/lib/python3.11/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from ._param_validation import Interval, validate_params
+  File "/home5/s6207529/.local/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 17, in <module>
+    from .validation import _is_arraylike_not_scalar
+  File "/home5/s6207529/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 15, in <module>
+    import joblib
+ModuleNotFoundError: No module named 'joblib'

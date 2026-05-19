@@ -1,0 +1,47 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:  40%|████      | 159/393 [00:00<00:00, 1559.58it/s]Loading weights:  80%|████████  | 315/393 [00:00<00:00, 1517.53it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 1847.92it/s]
+Wrote 233 predictions → runs/roberta-large_fallacy_classification_enhanced_seed42/submission.jsonl
+
+###############################################################################
+Hábrók Cluster
+Job 28949169 for user s6207529
+Finished at: Tue May 19 13:30:25 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 28949169
+Name                           : touche-pred
+User                           : s6207529
+Partition                      : gpushort
+Nodes                          : a100gpu6
+Number of Nodes                : 1
+Cores                          : 4
+Number of Tasks                : 1
+State                          : COMPLETED  
+Submit                         : 2026-05-19T13:08:34
+Start                          : 2026-05-19T13:29:56
+End                            : 2026-05-19T13:30:21
+Reserved walltime              : 00:30:00
+Used walltime                  : 00:00:25
+Used CPU time                  : 00:00:16 (Efficiency: 16.19%)
+% User (Computation)           : 76.19%
+% System (I/O)                 : 23.80%
+Total memory reserved          : 32G
+Maximum memory used            : 2.10G
+Requested GPUs                 : 1
+Allocated GPUs                 : a100=1
+Max GPU utilization            : 0%
+Max GPU memory used            : 0.00 
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

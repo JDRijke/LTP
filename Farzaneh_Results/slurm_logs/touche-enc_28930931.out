@@ -1,0 +1,83 @@
+Splits — train=750 val=94 internal-test=94
+{'loss': '0.712', 'grad_norm': '7.53', 'learning_rate': '1e-05', 'epoch': '0.4255'}
+{'loss': '0.7022', 'grad_norm': '4.181', 'learning_rate': '1.994e-05', 'epoch': '0.8511'}
+{'eval_loss': '0.686', 'eval_macro_f1': '0.4284', 'eval_weighted_f1': '0.4284', 'eval_macro_precision': '0.6158', 'eval_macro_recall': '0.5319', 'eval_runtime': '1.767', 'eval_samples_per_second': '53.2', 'eval_steps_per_second': '1.698', 'epoch': '1'}
+{'loss': '0.7058', 'grad_norm': '4.261', 'learning_rate': '1.876e-05', 'epoch': '1.277'}
+{'loss': '0.6627', 'grad_norm': '10.19', 'learning_rate': '1.757e-05', 'epoch': '1.702'}
+{'eval_loss': '0.6132', 'eval_macro_f1': '0.6616', 'eval_weighted_f1': '0.6616', 'eval_macro_precision': '0.6895', 'eval_macro_recall': '0.6702', 'eval_runtime': '1.518', 'eval_samples_per_second': '61.91', 'eval_steps_per_second': '1.976', 'epoch': '2'}
+{'loss': '0.6149', 'grad_norm': '8.58', 'learning_rate': '1.639e-05', 'epoch': '2.128'}
+{'loss': '0.5386', 'grad_norm': '10.09', 'learning_rate': '1.521e-05', 'epoch': '2.553'}
+{'loss': '0.5057', 'grad_norm': '24.85', 'learning_rate': '1.402e-05', 'epoch': '2.979'}
+{'eval_loss': '0.6824', 'eval_macro_f1': '0.7125', 'eval_weighted_f1': '0.7125', 'eval_macro_precision': '0.7136', 'eval_macro_recall': '0.7128', 'eval_runtime': '1.517', 'eval_samples_per_second': '61.98', 'eval_steps_per_second': '1.978', 'epoch': '3'}
+{'loss': '0.3372', 'grad_norm': '49.78', 'learning_rate': '1.284e-05', 'epoch': '3.404'}
+{'loss': '0.3028', 'grad_norm': '12.96', 'learning_rate': '1.166e-05', 'epoch': '3.83'}
+{'eval_loss': '1.045', 'eval_macro_f1': '0.6314', 'eval_weighted_f1': '0.6314', 'eval_macro_precision': '0.7299', 'eval_macro_recall': '0.6596', 'eval_runtime': '1.518', 'eval_samples_per_second': '61.93', 'eval_steps_per_second': '1.976', 'epoch': '4'}
+{'loss': '0.3431', 'grad_norm': '50.67', 'learning_rate': '1.047e-05', 'epoch': '4.255'}
+{'loss': '0.2225', 'grad_norm': '23.21', 'learning_rate': '9.29e-06', 'epoch': '4.681'}
+{'eval_loss': '1.17', 'eval_macro_f1': '0.6809', 'eval_weighted_f1': '0.6809', 'eval_macro_precision': '0.6809', 'eval_macro_recall': '0.6809', 'eval_runtime': '1.517', 'eval_samples_per_second': '61.97', 'eval_steps_per_second': '1.978', 'epoch': '5'}
+{'loss': '0.1177', 'grad_norm': '8.728', 'learning_rate': '8.107e-06', 'epoch': '5.106'}
+{'loss': '0.05992', 'grad_norm': '6.848', 'learning_rate': '6.923e-06', 'epoch': '5.532'}
+{'loss': '0.07667', 'grad_norm': '31.86', 'learning_rate': '5.74e-06', 'epoch': '5.957'}
+{'eval_loss': '1.709', 'eval_macro_f1': '0.6972', 'eval_weighted_f1': '0.6972', 'eval_macro_precision': '0.7162', 'eval_macro_recall': '0.7021', 'eval_runtime': '1.517', 'eval_samples_per_second': '61.96', 'eval_steps_per_second': '1.977', 'epoch': '6'}
+{'train_runtime': '297.9', 'train_samples_per_second': '20.14', 'train_steps_per_second': '1.262', 'train_loss': '0.4186', 'epoch': '6'}
+
+=== Internal test set report ===
+
+              precision    recall  f1-score   support
+
+ non-fallacy     0.7059    0.7660    0.7347        47
+     fallacy     0.7442    0.6809    0.7111        47
+
+    accuracy                         0.7234        94
+   macro avg     0.7250    0.7234    0.7229        94
+weighted avg     0.7250    0.7234    0.7229        94
+
+
+Done. Best model → runs/roberta-large_fallacy_detection_base_seed42/best
+Eval summary → runs/roberta-large_fallacy_detection_base_seed42/eval_summary.json
+
+###############################################################################
+Hábrók Cluster
+Job 28930931 for user s6207529
+Finished at: Mon May 18 19:23:52 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 28930931
+Name                           : touche-enc
+User                           : s6207529
+Partition                      : gpushort
+Nodes                          : v100v2gpu12
+Number of Nodes                : 1
+Cores                          : 8
+Number of Tasks                : 1
+State                          : COMPLETED  
+Submit                         : 2026-05-18T17:18:23
+Start                          : 2026-05-18T19:14:23
+End                            : 2026-05-18T19:23:47
+Reserved walltime              : 04:00:00
+Used walltime                  : 00:09:24
+Used CPU time                  : 00:04:37 (Efficiency:  6.14%)
+% User (Computation)           : 69.48%
+% System (I/O)                 : 30.51%
+Total memory reserved          : 64G
+Maximum memory used            : 14.79G
+Requested GPUs                 : 1
+Allocated GPUs                 : v100=1
+Max GPU utilization            : 98%
+Max GPU memory used            : 29.79G
+Hints and tips      :
+ 1) You requested much more CPU memory than your program used.
+    Please reduce the requested amount of memory.
+ *) For more information on these issues see:
+    https://wiki.hpc.rug.nl/habrok/additional_information/job_hints
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

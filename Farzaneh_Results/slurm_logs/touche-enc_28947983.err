@@ -1,0 +1,111 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:   7%|▋         | 29/389 [00:00<00:01, 220.36it/s]Loading weights:  13%|█▎        | 52/389 [00:00<00:02, 161.36it/s]Loading weights:  23%|██▎       | 89/389 [00:00<00:01, 232.50it/s]Loading weights:  31%|███       | 121/389 [00:00<00:01, 249.92it/s]Loading weights:  38%|███▊      | 148/389 [00:00<00:01, 208.80it/s]Loading weights:  44%|████▍     | 171/389 [00:00<00:01, 203.98it/s]Loading weights:  50%|████▉     | 193/389 [00:01<00:01, 143.86it/s]Loading weights: 100%|██████████| 389/389 [00:01<00:00, 328.49it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: roberta-large
+Key                        | Status     | 
+---------------------------+------------+-
+lm_head.layer_norm.bias    | UNEXPECTED | 
+lm_head.bias               | UNEXPECTED | 
+lm_head.layer_norm.weight  | UNEXPECTED | 
+lm_head.dense.bias         | UNEXPECTED | 
+lm_head.dense.weight       | UNEXPECTED | 
+classifier.out_proj.bias   | MISSING    | 
+classifier.out_proj.weight | MISSING    | 
+classifier.dense.bias      | MISSING    | 
+classifier.dense.weight    | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+  0%|          | 0/288 [00:00<?, ?it/s]  0%|          | 1/288 [00:04<20:12,  4.23s/it]  1%|          | 2/288 [00:04<08:38,  1.81s/it]  1%|          | 3/288 [00:04<05:10,  1.09s/it]  1%|▏         | 4/288 [00:04<03:18,  1.43it/s]  2%|▏         | 5/288 [00:04<02:17,  2.06it/s]  2%|▏         | 7/288 [00:04<01:21,  3.46it/s]  3%|▎         | 9/288 [00:05<00:59,  4.69it/s]  3%|▎         | 10/288 [00:05<00:52,  5.32it/s]  4%|▍         | 11/288 [00:05<00:46,  5.98it/s]  5%|▍         | 13/288 [00:05<00:39,  6.95it/s]  5%|▌         | 15/288 [00:05<00:34,  7.95it/s]  6%|▌         | 17/288 [00:06<00:31,  8.62it/s]  6%|▋         | 18/288 [00:06<00:30,  8.75it/s]  7%|▋         | 19/288 [00:06<00:29,  8.97it/s]                                                  7%|▋         | 20/288 [00:06<00:29,  8.97it/s]  7%|▋         | 21/288 [00:06<00:32,  8.30it/s]  8%|▊         | 23/288 [00:06<00:29,  8.94it/s]  8%|▊         | 24/288 [00:06<00:28,  9.11it/s]
+  0%|          | 0/2 [00:00<?, ?it/s][A                                                
+                                     [A  8%|▊         | 24/288 [00:06<00:28,  9.11it/s]
+100%|██████████| 2/2 [00:00<00:00, 29.65it/s][A
+                                             [A
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it][AWriting model shards: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]
+  9%|▊         | 25/288 [00:16<10:08,  2.32s/it]  9%|▉         | 26/288 [00:16<07:46,  1.78s/it] 10%|▉         | 28/288 [00:17<04:44,  1.09s/it] 10%|█         | 29/288 [00:17<03:45,  1.15it/s] 10%|█         | 30/288 [00:17<02:57,  1.46it/s] 11%|█         | 31/288 [00:17<02:19,  1.85it/s] 11%|█▏        | 33/288 [00:17<01:29,  2.86it/s] 12%|█▏        | 35/288 [00:17<01:04,  3.91it/s] 13%|█▎        | 37/288 [00:17<00:50,  4.98it/s] 13%|█▎        | 38/288 [00:18<00:45,  5.50it/s] 14%|█▍        | 40/288 [00:18<00:37,  6.61it/s]                                                 14%|█▍        | 40/288 [00:18<00:37,  6.61it/s] 15%|█▍        | 42/288 [00:18<00:32,  7.55it/s] 15%|█▍        | 43/288 [00:18<00:30,  7.93it/s] 16%|█▌        | 45/288 [00:18<00:28,  8.57it/s] 16%|█▋        | 47/288 [00:18<00:26,  9.26it/s]
+  0%|          | 0/2 [00:00<?, ?it/s][A                                                
+                                     [A 17%|█▋        | 48/288 [00:19<00:25,  9.26it/s]
+100%|██████████| 2/2 [00:00<00:00, 79.10it/s][A
+                                             [A
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.72s/it][AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.72s/it]
+ 17%|█▋        | 49/288 [00:28<06:13,  1.56s/it] 17%|█▋        | 50/288 [00:28<05:07,  1.29s/it] 18%|█▊        | 52/288 [00:28<03:27,  1.14it/s] 19%|█▉        | 54/288 [00:28<02:25,  1.61it/s] 19%|█▉        | 55/288 [00:28<02:01,  1.92it/s] 19%|█▉        | 56/288 [00:28<01:40,  2.32it/s] 20%|█▉        | 57/288 [00:28<01:21,  2.82it/s] 20%|██        | 58/288 [00:29<01:07,  3.42it/s] 20%|██        | 59/288 [00:29<00:55,  4.13it/s] 21%|██        | 60/288 [00:29<00:46,  4.89it/s]                                                 21%|██        | 60/288 [00:29<00:46,  4.89it/s] 22%|██▏       | 62/288 [00:29<00:35,  6.31it/s] 22%|██▏       | 63/288 [00:29<00:32,  6.88it/s] 22%|██▏       | 64/288 [00:29<00:30,  7.46it/s] 23%|██▎       | 65/288 [00:29<00:27,  8.00it/s] 23%|██▎       | 66/288 [00:29<00:26,  8.33it/s] 23%|██▎       | 67/288 [00:29<00:25,  8.72it/s] 24%|██▎       | 68/288 [00:30<00:24,  9.01it/s] 24%|██▍       | 70/288 [00:30<00:22,  9.56it/s] 25%|██▌       | 72/288 [00:30<00:21,  9.99it/s]
+  0%|          | 0/2 [00:00<?, ?it/s][A                                                
+                                     [A 25%|██▌       | 72/288 [00:30<00:21,  9.99it/s]
+100%|██████████| 2/2 [00:00<00:00, 78.32it/s][A
+                                             [A
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.62s/it][AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.62s/it]
+ 26%|██▌       | 74/288 [00:39<06:08,  1.72s/it] 26%|██▌       | 75/288 [00:39<04:56,  1.39s/it] 27%|██▋       | 77/288 [00:40<03:13,  1.09it/s] 27%|██▋       | 79/288 [00:40<02:13,  1.57it/s] 28%|██▊       | 80/288 [00:40<01:50,  1.88it/s]                                                 28%|██▊       | 80/288 [00:40<01:50,  1.88it/s] 28%|██▊       | 81/288 [00:40<01:30,  2.29it/s] 28%|██▊       | 82/288 [00:40<01:13,  2.80it/s] 29%|██▉       | 84/288 [00:40<00:51,  3.99it/s] 30%|██▉       | 85/288 [00:40<00:44,  4.61it/s] 30%|██▉       | 86/288 [00:40<00:38,  5.30it/s] 30%|███       | 87/288 [00:41<00:33,  6.02it/s] 31%|███       | 88/288 [00:41<00:30,  6.66it/s] 31%|███       | 89/288 [00:41<00:27,  7.34it/s] 31%|███▏      | 90/288 [00:41<00:25,  7.80it/s] 32%|███▏      | 92/288 [00:41<00:22,  8.72it/s] 32%|███▏      | 93/288 [00:41<00:22,  8.60it/s] 33%|███▎      | 94/288 [00:41<00:22,  8.73it/s] 33%|███▎      | 95/288 [00:41<00:21,  9.00it/s]
+  0%|          | 0/2 [00:00<?, ?it/s][A                                                
+                                     [A 33%|███▎      | 96/288 [00:42<00:21,  9.00it/s]
+100%|██████████| 2/2 [00:00<00:00, 79.08it/s][A
+                                             [A
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.67s/it][AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.67s/it]
+ 34%|███▎      | 97/288 [00:50<05:59,  1.88s/it] 34%|███▍      | 98/288 [00:50<04:39,  1.47s/it] 34%|███▍      | 99/288 [00:50<03:32,  1.13s/it] 35%|███▍      | 100/288 [00:50<02:40,  1.17it/s]                                                  35%|███▍      | 100/288 [00:50<02:40,  1.17it/s] 35%|███▌      | 102/288 [00:50<01:38,  1.89it/s] 36%|███▌      | 103/288 [00:50<01:19,  2.33it/s] 36%|███▋      | 105/288 [00:51<00:54,  3.38it/s] 37%|███▋      | 106/288 [00:51<00:45,  3.96it/s] 37%|███▋      | 107/288 [00:51<00:39,  4.54it/s] 38%|███▊      | 109/288 [00:51<00:30,  5.91it/s] 39%|███▊      | 111/288 [00:51<00:25,  6.81it/s] 39%|███▉      | 113/288 [00:51<00:22,  7.74it/s] 40%|███▉      | 114/288 [00:52<00:21,  8.00it/s] 40%|████      | 116/288 [00:52<00:19,  8.78it/s] 41%|████      | 117/288 [00:52<00:19,  8.87it/s] 41%|████      | 118/288 [00:52<00:18,  8.95it/s] 42%|████▏     | 120/288 [00:52<00:17,  9.70it/s]                                                  42%|████▏     | 120/288 [00:52<00:17,  9.70it/s]
+  0%|          | 0/2 [00:00<?, ?it/s][A                                                 
+                                     [A 42%|████▏     | 120/288 [00:52<00:17,  9.70it/s]
+100%|██████████| 2/2 [00:00<00:00, 79.64it/s][A
+                                             [A
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.69s/it][AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.69s/it]
+ 42%|████▏     | 122/288 [01:01<04:25,  1.60s/it] 43%|████▎     | 123/288 [01:01<03:33,  1.29s/it] 43%|████▎     | 125/288 [01:01<02:18,  1.17it/s] 44%|████▍     | 127/288 [01:01<01:35,  1.69it/s] 44%|████▍     | 128/288 [01:01<01:19,  2.02it/s] 45%|████▍     | 129/288 [01:01<01:05,  2.44it/s] 45%|████▌     | 131/288 [01:02<00:45,  3.46it/s] 46%|████▌     | 133/288 [01:02<00:34,  4.52it/s] 47%|████▋     | 134/288 [01:02<00:30,  4.97it/s] 47%|████▋     | 136/288 [01:02<00:25,  6.07it/s] 48%|████▊     | 137/288 [01:02<00:23,  6.52it/s] 48%|████▊     | 138/288 [01:02<00:21,  6.85it/s] 49%|████▊     | 140/288 [01:02<00:18,  7.97it/s]                                                  49%|████▊     | 140/288 [01:02<00:18,  7.97it/s] 49%|████▉     | 141/288 [01:03<00:17,  8.31it/s] 49%|████▉     | 142/288 [01:03<00:16,  8.64it/s] 50%|████▉     | 143/288 [01:03<00:16,  8.87it/s]
+  0%|          | 0/2 [00:00<?, ?it/s][A                                                 
+                                     [A 50%|█████     | 144/288 [01:03<00:16,  8.87it/s]
+100%|██████████| 2/2 [00:00<00:00, 79.77it/s][A
+                                             [A
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.58s/it][AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.58s/it]
+ 50%|█████     | 145/288 [01:12<04:38,  1.95s/it] 51%|█████     | 146/288 [01:12<03:38,  1.54s/it] 51%|█████     | 147/288 [01:12<02:46,  1.18s/it] 51%|█████▏    | 148/288 [01:12<02:05,  1.11it/s] 52%|█████▏    | 149/288 [01:12<01:35,  1.46it/s] 52%|█████▏    | 150/288 [01:12<01:12,  1.90it/s] 52%|█████▏    | 151/288 [01:12<00:55,  2.45it/s] 53%|█████▎    | 152/288 [01:13<00:43,  3.11it/s] 53%|█████▎    | 153/288 [01:13<00:35,  3.85it/s] 53%|█████▎    | 154/288 [01:13<00:28,  4.69it/s] 54%|█████▍    | 155/288 [01:13<00:24,  5.45it/s] 54%|█████▍    | 156/288 [01:13<00:21,  6.01it/s] 55%|█████▍    | 157/288 [01:13<00:20,  6.49it/s] 55%|█████▍    | 158/288 [01:13<00:18,  7.11it/s] 55%|█████▌    | 159/288 [01:13<00:16,  7.70it/s] 56%|█████▌    | 160/288 [01:13<00:15,  8.04it/s]                                                  56%|█████▌    | 160/288 [01:13<00:15,  8.04it/s] 56%|█████▌    | 161/288 [01:14<00:15,  8.19it/s] 56%|█████▋    | 162/288 [01:14<00:15,  8.27it/s] 57%|█████▋    | 163/288 [01:14<00:14,  8.41it/s] 57%|█████▋    | 164/288 [01:14<00:14,  8.69it/s] 58%|█████▊    | 166/288 [01:14<00:13,  9.06it/s] 58%|█████▊    | 167/288 [01:14<00:13,  9.12it/s]
+  0%|          | 0/2 [00:00<?, ?it/s][A                                                 
+                                     [A 58%|█████▊    | 168/288 [01:14<00:13,  9.12it/s]
+100%|██████████| 2/2 [00:00<00:00, 72.40it/s][A
+                                             [A
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:03<00:00,  3.00s/it][AWriting model shards: 100%|██████████| 1/1 [00:03<00:00,  3.00s/it]
+ 59%|█████▊    | 169/288 [01:24<04:01,  2.03s/it] 59%|█████▉    | 170/288 [01:24<03:07,  1.59s/it] 59%|█████▉    | 171/288 [01:24<02:23,  1.23s/it] 60%|█████▉    | 172/288 [01:24<01:48,  1.06it/s] 60%|██████    | 173/288 [01:24<01:21,  1.40it/s] 60%|██████    | 174/288 [01:24<01:01,  1.85it/s] 61%|██████    | 176/288 [01:24<00:38,  2.90it/s] 61%|██████▏   | 177/288 [01:25<00:31,  3.50it/s] 62%|██████▏   | 178/288 [01:25<00:26,  4.11it/s] 62%|██████▎   | 180/288 [01:25<00:19,  5.50it/s]                                                  62%|██████▎   | 180/288 [01:25<00:19,  5.50it/s] 63%|██████▎   | 182/288 [01:25<00:15,  6.65it/s] 64%|██████▎   | 183/288 [01:25<00:14,  7.15it/s] 64%|██████▍   | 185/288 [01:25<00:12,  8.13it/s] 65%|██████▍   | 186/288 [01:25<00:12,  8.39it/s] 65%|██████▌   | 188/288 [01:26<00:11,  8.81it/s] 66%|██████▌   | 189/288 [01:26<00:10,  9.00it/s] 66%|██████▌   | 190/288 [01:26<00:10,  9.02it/s] 67%|██████▋   | 192/288 [01:26<00:09,  9.68it/s]
+  0%|          | 0/2 [00:00<?, ?it/s][A                                                 
+                                     [A 67%|██████▋   | 192/288 [01:26<00:09,  9.68it/s]
+100%|██████████| 2/2 [00:00<00:00, 79.64it/s][A
+                                             [A
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.86s/it][AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.86s/it]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home5/s6207529/touche2026/src/train_encoder.py", line 232, in <module>
+    main()
+  File "/home5/s6207529/touche2026/src/train_encoder.py", line 180, in main
+    trainer.train()
+  File "/scratch/s6207529/envs/touche2026/lib/python3.11/site-packages/transformers/trainer.py", line 1427, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/s6207529/envs/touche2026/lib/python3.11/site-packages/transformers/trainer.py", line 1509, in _inner_training_loop
+    self._run_epoch(
+  File "/scratch/s6207529/envs/touche2026/lib/python3.11/site-packages/transformers/trainer.py", line 1810, in _run_epoch
+    self._maybe_log_save_evaluate(
+  File "/scratch/s6207529/envs/touche2026/lib/python3.11/site-packages/transformers/trainer.py", line 2091, in _maybe_log_save_evaluate
+    self._save_checkpoint(model, trial)
+  File "/scratch/s6207529/envs/touche2026/lib/python3.11/site-packages/transformers/trainer.py", line 3076, in _save_checkpoint
+    self._save_optimizer_and_scheduler(output_dir)
+  File "/scratch/s6207529/envs/touche2026/lib/python3.11/site-packages/transformers/trainer.py", line 3260, in _save_optimizer_and_scheduler
+    torch.save(self.lr_scheduler.state_dict(), os.path.join(output_dir, SCHEDULER_NAME))
+  File "/scratch/s6207529/envs/touche2026/lib/python3.11/site-packages/torch/serialization.py", line 849, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/s6207529/envs/touche2026/lib/python3.11/site-packages/torch/serialization.py", line 716, in _open_zipfile_writer
+    return container(name_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/s6207529/envs/touche2026/lib/python3.11/site-packages/torch/serialization.py", line 687, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: File runs/roberta-large_fallacy_classification_base_seed42/hf/checkpoint-192/scheduler.pt cannot be opened.
+ 67%|██████▋   | 192/288 [01:33<00:46,  2.05it/s]

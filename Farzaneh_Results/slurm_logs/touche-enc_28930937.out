@@ -1,0 +1,45 @@
+Splits — train=750 val=94 internal-test=94
+{'loss': '0.678', 'grad_norm': '5.445', 'learning_rate': '1e-05', 'epoch': '0.4255'}
+{'loss': '0.5852', 'grad_norm': '31.72', 'learning_rate': '1.994e-05', 'epoch': '0.8511'}
+{'eval_loss': '0.7298', 'eval_macro_f1': '0.4284', 'eval_weighted_f1': '0.4284', 'eval_macro_precision': '0.6158', 'eval_macro_recall': '0.5319', 'eval_runtime': '2.433', 'eval_samples_per_second': '38.64', 'eval_steps_per_second': '1.233', 'epoch': '1'}
+
+###############################################################################
+Hábrók Cluster
+Job 28930937 for user s6207529
+Finished at: Mon May 18 19:29:51 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 28930937
+Name                           : touche-enc
+User                           : s6207529
+Partition                      : gpushort
+Nodes                          : v100v2gpu12
+Number of Nodes                : 1
+Cores                          : 8
+Number of Tasks                : 1
+State                          : FAILED  
+Submit                         : 2026-05-18T17:18:23
+Start                          : 2026-05-18T19:28:26
+End                            : 2026-05-18T19:29:47
+Reserved walltime              : 04:00:00
+Used walltime                  : 00:01:21
+Used CPU time                  : 00:01:16 (Efficiency: 11.79%)
+% User (Computation)           : 73.13%
+% System (I/O)                 : 26.87%
+Total memory reserved          : 64G
+Maximum memory used            : 2.40G
+Requested GPUs                 : 1
+Allocated GPUs                 : v100=1
+Max GPU utilization            : 98%
+Max GPU memory used            : 25.03G
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

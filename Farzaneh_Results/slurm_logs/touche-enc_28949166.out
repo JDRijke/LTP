@@ -1,0 +1,83 @@
+Splits — train=371 val=47 internal-test=47
+{'loss': '2.114', 'grad_norm': '11.16', 'learning_rate': '1.31e-05', 'epoch': '0.8333'}
+{'eval_loss': '2.077', 'eval_macro_f1': '0.1063', 'eval_weighted_f1': '0.1145', 'eval_macro_precision': '0.2708', 'eval_macro_recall': '0.1488', 'eval_runtime': '0.2269', 'eval_samples_per_second': '207.2', 'eval_steps_per_second': '8.815', 'epoch': '1'}
+{'loss': '2.05', 'grad_norm': '15.48', 'learning_rate': '1.923e-05', 'epoch': '1.667'}
+{'eval_loss': '1.805', 'eval_macro_f1': '0.3321', 'eval_weighted_f1': '0.3534', 'eval_macro_precision': '0.4034', 'eval_macro_recall': '0.4048', 'eval_runtime': '0.081', 'eval_samples_per_second': '580.2', 'eval_steps_per_second': '24.69', 'epoch': '2'}
+{'loss': '1.756', 'grad_norm': '19.38', 'learning_rate': '1.768e-05', 'epoch': '2.5'}
+{'eval_loss': '1.258', 'eval_macro_f1': '0.6149', 'eval_weighted_f1': '0.6247', 'eval_macro_precision': '0.683', 'eval_macro_recall': '0.6048', 'eval_runtime': '0.0803', 'eval_samples_per_second': '585.5', 'eval_steps_per_second': '24.92', 'epoch': '3'}
+{'loss': '1.214', 'grad_norm': '23.86', 'learning_rate': '1.614e-05', 'epoch': '3.333'}
+{'eval_loss': '0.8982', 'eval_macro_f1': '0.7004', 'eval_weighted_f1': '0.7162', 'eval_macro_precision': '0.7746', 'eval_macro_recall': '0.725', 'eval_runtime': '0.0812', 'eval_samples_per_second': '579', 'eval_steps_per_second': '24.64', 'epoch': '4'}
+{'loss': '0.7406', 'grad_norm': '13.16', 'learning_rate': '1.459e-05', 'epoch': '4.167'}
+{'loss': '0.3733', 'grad_norm': '30.19', 'learning_rate': '1.305e-05', 'epoch': '5'}
+{'eval_loss': '0.7513', 'eval_macro_f1': '0.7064', 'eval_weighted_f1': '0.7259', 'eval_macro_precision': '0.731', 'eval_macro_recall': '0.7208', 'eval_runtime': '0.0738', 'eval_samples_per_second': '637.2', 'eval_steps_per_second': '27.11', 'epoch': '5'}
+{'loss': '0.1425', 'grad_norm': '26.38', 'learning_rate': '1.151e-05', 'epoch': '5.833'}
+{'eval_loss': '0.6314', 'eval_macro_f1': '0.7961', 'eval_weighted_f1': '0.8059', 'eval_macro_precision': '0.808', 'eval_macro_recall': '0.7958', 'eval_runtime': '0.0814', 'eval_samples_per_second': '577.2', 'eval_steps_per_second': '24.56', 'epoch': '6'}
+{'loss': '0.08319', 'grad_norm': '1.718', 'learning_rate': '9.961e-06', 'epoch': '6.667'}
+{'eval_loss': '0.8949', 'eval_macro_f1': '0.7924', 'eval_weighted_f1': '0.7974', 'eval_macro_precision': '0.8482', 'eval_macro_recall': '0.8042', 'eval_runtime': '0.0806', 'eval_samples_per_second': '583', 'eval_steps_per_second': '24.81', 'epoch': '7'}
+{'loss': '0.03146', 'grad_norm': '0.3177', 'learning_rate': '8.417e-06', 'epoch': '7.5'}
+{'eval_loss': '0.794', 'eval_macro_f1': '0.7382', 'eval_weighted_f1': '0.7461', 'eval_macro_precision': '0.7775', 'eval_macro_recall': '0.7542', 'eval_runtime': '0.0805', 'eval_samples_per_second': '583.9', 'eval_steps_per_second': '24.85', 'epoch': '8'}
+{'loss': '0.007793', 'grad_norm': '5.896', 'learning_rate': '6.873e-06', 'epoch': '8.333'}
+{'eval_loss': '0.9214', 'eval_macro_f1': '0.7882', 'eval_weighted_f1': '0.7971', 'eval_macro_precision': '0.8375', 'eval_macro_recall': '0.7958', 'eval_runtime': '0.0819', 'eval_samples_per_second': '573.7', 'eval_steps_per_second': '24.41', 'epoch': '9'}
+{'train_runtime': '83.26', 'train_samples_per_second': '53.47', 'train_steps_per_second': '3.459', 'train_loss': '0.7887', 'epoch': '9'}
+
+=== Internal test set report ===
+
+                      precision    recall  f1-score   support
+
+           authority     0.7500    0.5000    0.6000         6
+         black-white     0.6000    0.6000    0.6000         5
+hasty_generalization     0.5556    0.8333    0.6667         6
+             natural     0.7500    1.0000    0.8571         6
+          population     0.5000    0.6000    0.5455         5
+      slippery_slope     1.0000    1.0000    1.0000         6
+           tradition     0.6667    0.2857    0.4000         7
+      worse_problems     0.6667    0.6667    0.6667         6
+
+            accuracy                         0.6809        47
+           macro avg     0.6861    0.6857    0.6670        47
+        weighted avg     0.6915    0.6809    0.6653        47
+
+
+Done. Best model → runs/roberta-large_fallacy_classification_base_seed42/best
+Eval summary → runs/roberta-large_fallacy_classification_base_seed42/eval_summary.json
+
+###############################################################################
+Hábrók Cluster
+Job 28949166 for user s6207529
+Finished at: Tue May 19 13:30:02 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 28949166
+Name                           : touche-enc
+User                           : s6207529
+Partition                      : gpushort
+Nodes                          : a100gpu6
+Number of Nodes                : 1
+Cores                          : 8
+Number of Tasks                : 1
+State                          : COMPLETED  
+Submit                         : 2026-05-19T13:08:34
+Start                          : 2026-05-19T13:27:56
+End                            : 2026-05-19T13:29:58
+Reserved walltime              : 04:00:00
+Used walltime                  : 00:02:02
+Used CPU time                  : 00:01:26 (Efficiency:  8.79%)
+% User (Computation)           : 58.69%
+% System (I/O)                 : 41.31%
+Total memory reserved          : 64G
+Maximum memory used            : 14.68G
+Requested GPUs                 : a100=1
+Allocated GPUs                 : a100=1
+Max GPU utilization            : 33%
+Max GPU memory used            : 10.43G
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

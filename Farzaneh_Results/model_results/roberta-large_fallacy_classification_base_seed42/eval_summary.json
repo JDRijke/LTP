@@ -1,0 +1,9 @@
+{
+  "task": "fallacy_classification",
+  "variant": "base",
+  "include_argument": false,
+  "model": "roberta-large",
+  "macro_f1": 0.666991341991342,
+  "weighted_f1": 0.6653219121304228,
+  "n_eval": 47
+}

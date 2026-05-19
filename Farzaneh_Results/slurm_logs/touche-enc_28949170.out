@@ -1,0 +1,77 @@
+Splits — train=371 val=47 internal-test=47
+{'loss': '2.146', 'grad_norm': '81.58', 'learning_rate': '1.31e-05', 'epoch': '0.8333'}
+{'eval_loss': '1.953', 'eval_macro_f1': '0.1413', 'eval_weighted_f1': '0.1429', 'eval_macro_precision': '0.1988', 'eval_macro_recall': '0.2006', 'eval_runtime': '0.1221', 'eval_samples_per_second': '384.9', 'eval_steps_per_second': '16.38', 'epoch': '1'}
+{'loss': '1.477', 'grad_norm': '11.98', 'learning_rate': '1.923e-05', 'epoch': '1.667'}
+{'eval_loss': '1.458', 'eval_macro_f1': '0.4362', 'eval_weighted_f1': '0.4433', 'eval_macro_precision': '0.4477', 'eval_macro_recall': '0.4946', 'eval_runtime': '0.1212', 'eval_samples_per_second': '387.6', 'eval_steps_per_second': '16.5', 'epoch': '2'}
+{'loss': '0.7384', 'grad_norm': '18.79', 'learning_rate': '1.768e-05', 'epoch': '2.5'}
+{'eval_loss': '1.226', 'eval_macro_f1': '0.6936', 'eval_weighted_f1': '0.6998', 'eval_macro_precision': '0.7462', 'eval_macro_recall': '0.7018', 'eval_runtime': '0.1213', 'eval_samples_per_second': '387.6', 'eval_steps_per_second': '16.49', 'epoch': '3'}
+{'loss': '0.1432', 'grad_norm': '1.373', 'learning_rate': '1.614e-05', 'epoch': '3.333'}
+{'eval_loss': '1.212', 'eval_macro_f1': '0.6643', 'eval_weighted_f1': '0.6686', 'eval_macro_precision': '0.6935', 'eval_macro_recall': '0.6696', 'eval_runtime': '0.1209', 'eval_samples_per_second': '388.7', 'eval_steps_per_second': '16.54', 'epoch': '4'}
+{'loss': '0.0208', 'grad_norm': '1.347', 'learning_rate': '1.459e-05', 'epoch': '4.167'}
+{'loss': '0.001749', 'grad_norm': '0.06176', 'learning_rate': '1.305e-05', 'epoch': '5'}
+{'eval_loss': '1.288', 'eval_macro_f1': '0.6355', 'eval_weighted_f1': '0.635', 'eval_macro_precision': '0.7473', 'eval_macro_recall': '0.6518', 'eval_runtime': '0.1093', 'eval_samples_per_second': '430.1', 'eval_steps_per_second': '18.3', 'epoch': '5'}
+{'loss': '0.0004589', 'grad_norm': '0.02639', 'learning_rate': '1.151e-05', 'epoch': '5.833'}
+{'eval_loss': '1.312', 'eval_macro_f1': '0.6427', 'eval_weighted_f1': '0.6449', 'eval_macro_precision': '0.7001', 'eval_macro_recall': '0.6518', 'eval_runtime': '0.1199', 'eval_samples_per_second': '392', 'eval_steps_per_second': '16.68', 'epoch': '6'}
+{'train_runtime': '58.15', 'train_samples_per_second': '76.56', 'train_steps_per_second': '4.952', 'train_loss': '0.6289', 'epoch': '6'}
+
+=== Internal test set report ===
+
+                      precision    recall  f1-score   support
+
+           authority     0.2000    0.1667    0.1818         6
+         black-white     0.3750    0.6000    0.4615         5
+hasty_generalization     0.2500    0.1667    0.2000         6
+             natural     0.8571    1.0000    0.9231         6
+          population     0.1000    0.2000    0.1333         5
+      slippery_slope     1.0000    0.8333    0.9091         6
+           tradition     0.6667    0.2857    0.4000         7
+      worse_problems     0.4000    0.3333    0.3636         6
+
+            accuracy                         0.4468        47
+           macro avg     0.4811    0.4482    0.4466        47
+        weighted avg     0.4954    0.4468    0.4519        47
+
+
+Done. Best model → runs/answerdotai_ModernBERT-large_fallacy_classification_base_seed42/best
+Eval summary → runs/answerdotai_ModernBERT-large_fallacy_classification_base_seed42/eval_summary.json
+
+###############################################################################
+Hábrók Cluster
+Job 28949170 for user s6207529
+Finished at: Tue May 19 13:33:33 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 28949170
+Name                           : touche-enc
+User                           : s6207529
+Partition                      : gpushort
+Nodes                          : a100gpu6
+Number of Nodes                : 1
+Cores                          : 8
+Number of Tasks                : 1
+State                          : COMPLETED  
+Submit                         : 2026-05-19T13:08:34
+Start                          : 2026-05-19T13:31:57
+End                            : 2026-05-19T13:33:29
+Reserved walltime              : 04:00:00
+Used walltime                  : 00:01:32
+Used CPU time                  : 00:01:06 (Efficiency:  9.01%)
+% User (Computation)           : 60.60%
+% System (I/O)                 : 39.40%
+Total memory reserved          : 64G
+Maximum memory used            : 16.15G
+Requested GPUs                 : a100=1
+Allocated GPUs                 : a100=1
+Max GPU utilization            : 33%
+Max GPU memory used            : 12.16G
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

@@ -1,0 +1,9 @@
+{
+  "task": "fallacy_classification",
+  "variant": "enhanced",
+  "include_argument": false,
+  "model": "answerdotai/ModernBERT-large",
+  "macro_f1": 0.9556623931623931,
+  "weighted_f1": 0.9570831060192763,
+  "n_eval": 47
+}

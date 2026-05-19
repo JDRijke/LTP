@@ -1,0 +1,9 @@
+{
+  "task": "fallacy_detection",
+  "variant": "base",
+  "include_argument": false,
+  "model": "roberta-large",
+  "macro_f1": 0.7229024943310658,
+  "weighted_f1": 0.7229024943310658,
+  "n_eval": 94
+}

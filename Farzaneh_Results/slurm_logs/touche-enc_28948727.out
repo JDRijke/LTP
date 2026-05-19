@@ -1,0 +1,42 @@
+Splits — train=371 val=47 internal-test=47
+
+###############################################################################
+Hábrók Cluster
+Job 28948727 for user s6207529
+Finished at: Tue May 19 12:42:10 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 28948727
+Name                           : touche-enc
+User                           : s6207529
+Partition                      : gpushort
+Nodes                          : a100gpu5
+Number of Nodes                : 1
+Cores                          : 8
+Number of Tasks                : 1
+State                          : FAILED  
+Submit                         : 2026-05-19T12:24:11
+Start                          : 2026-05-19T12:41:38
+End                            : 2026-05-19T12:42:06
+Reserved walltime              : 04:00:00
+Used walltime                  : 00:00:28
+Used CPU time                  : 00:00:16 (Efficiency:  7.27%)
+% User (Computation)           : 78.01%
+% System (I/O)                 : 21.99%
+Total memory reserved          : 64G
+Maximum memory used            : 600.70M
+Requested GPUs                 : a100=1
+Allocated GPUs                 : a100=1
+Max GPU utilization            : 0%
+Max GPU memory used            : 0.00 
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################
