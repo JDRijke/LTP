@@ -28,7 +28,10 @@ echo "CUDA_VISIBLE_DEVICES: $CUDA_VISIBLE_DEVICES"
 # Verify GPU is actually visible
 nvidia-smi || echo "WARNING: nvidia-smi failed — GPU may not be allocated"
 
-# Activate your venv (must have been created with the same Python/CUDA above)
+# Change to project root so relative paths work
+cd /scratch/$USER/LTP
+
+# Activate your venv
 source /scratch/$USER/LTP/.venv/bin/activate
 
 echo "Python: $(which python3)"
