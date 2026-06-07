@@ -1,0 +1,72 @@
+=== Job Info ===
+Job: prompt_llm (29353904) on a100gpu3
+CUDA_VISIBLE_DEVICES: 0
+Sun Jun  7 19:05:41 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.71.05              Driver Version: 595.71.05      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-PCIE-40GB          On  |   00000000:65:00.0 Off |                    0 |
+| N/A   33C    P0             35W /  250W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Python: /scratch/s4957075/LTP/.venv/bin/python3
+PyTorch version: 2.12.0+cu126
+CUDA available: True
+GPU: NVIDIA A100-PCIE-40GB
+Using internal test set: 47 examples
+Loading model: google/gemma-4-E4B-it
+Model loaded in 13.7s
+Wrote internal evaluation results → llm_results/classification/gemma-4-E4B-it/test_internal/base_zero_shot_results.jsonl
+
+###############################################################################
+Hábrók Cluster
+Job 29353904 for user s4957075
+Finished at: Sun Jun  7 19:07:41 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 29353904
+Name                           : prompt_llm
+User                           : s4957075
+Partition                      : gpushort
+Nodes                          : a100gpu3
+Number of Nodes                : 1
+Cores                          : 1
+Number of Tasks                : 1
+State                          : COMPLETED  
+Submit                         : 2026-06-07T18:59:26
+Start                          : 2026-06-07T19:05:38
+End                            : 2026-06-07T19:07:36
+Reserved walltime              : 00:10:00
+Used walltime                  : 00:01:58
+Used CPU time                  : 00:01:23 (Efficiency: 70.03%)
+% User (Computation)           : 84.85%
+% System (I/O)                 : 15.15%
+Total memory reserved          : 8G
+Maximum memory used            : 7.70G
+Requested GPUs                 : 1
+Allocated GPUs                 : a100=1
+Max GPU utilization            : 62%
+Max GPU memory used            : 18.13G
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################
