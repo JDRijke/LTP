@@ -1,0 +1,10 @@
+# Install PyTorch separately with the correct CUDA version for your cluster:
+# pip install torch --index-url https://download.pytorch.org/whl/cu118
+# (replace cu118 with your cluster's CUDA version, e.g. cu121 for CUDA 12.1)
+torch
+transformers>=4.40.0
+datasets>=2.18.0
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+accelerate>=0.27.0
