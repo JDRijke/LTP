@@ -29,7 +29,7 @@ echo "CUDA_VISIBLE_DEVICES: $CUDA_VISIBLE_DEVICES"
 nvidia-smi || echo "WARNING: nvidia-smi failed — GPU may not be allocated"
 
 # Activate your venv (must have been created with the same Python/CUDA above)
-source /scratch/s4957075/LTP/.venv/bin/activate
+source f"/scratch/$USER/LTP/.venv/bin/activate"
 
 echo "Python: $(which python3)"
 
