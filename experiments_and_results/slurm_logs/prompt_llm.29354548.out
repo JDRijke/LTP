@@ -1,0 +1,103 @@
+=== Job Info ===
+Job: prompt_llm (29354548) on v100v2gpu11
+CUDA_VISIBLE_DEVICES: 0
+Sun Jun  7 21:21:20 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.159.04             Driver Version: 580.159.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           On  |   00000000:AF:00.0 Off |                    0 |
+| N/A   38C    P0             27W /  250W |       0MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Python: /scratch/s4957075/LTP/.venv/bin/python3
+PyTorch version: 2.12.0+cu126
+CUDA available: True
+GPU: Tesla V100-PCIE-32GB
+Using internal test set: 94 examples
+Loading model: google/gemma-4-E4B-it
+Model loaded in 19.8s
+Wrote internal evaluation results → llm_results/detection/gemma-4-E4B-it/test_internal/base_zero_shot_results.jsonl
+Using internal test set: 94 examples
+Loading model: google/gemma-4-E4B-it
+Model loaded in 15.4s
+Wrote internal evaluation results → llm_results/detection/gemma-4-E4B-it/test_internal/enhanced_zero_shot_results.jsonl
+Few-shot exemplars: 4
+Using internal test set: 94 examples
+Loading model: google/gemma-4-E4B-it
+Model loaded in 14.9s
+Wrote internal evaluation results → llm_results/detection/gemma-4-E4B-it/test_internal/base_few_shot_results.jsonl
+Few-shot exemplars: 4
+Using internal test set: 94 examples
+Loading model: google/gemma-4-E4B-it
+Model loaded in 14.9s
+Wrote internal evaluation results → llm_results/detection/gemma-4-E4B-it/test_internal/enhanced_few_shot_results.jsonl
+Using internal test set: 47 examples
+Loading model: google/gemma-4-E4B-it
+Model loaded in 14.9s
+Wrote internal evaluation results → llm_results/classification/gemma-4-E4B-it/test_internal/base_zero_shot_results.jsonl
+Using internal test set: 47 examples
+Loading model: google/gemma-4-E4B-it
+Model loaded in 14.8s
+Wrote internal evaluation results → llm_results/classification/gemma-4-E4B-it/test_internal/enhanced_zero_shot_results.jsonl
+Few-shot exemplars: 16
+Using internal test set: 47 examples
+Loading model: google/gemma-4-E4B-it
+Model loaded in 14.9s
+Wrote internal evaluation results → llm_results/classification/gemma-4-E4B-it/test_internal/base_few_shot_results.jsonl
+Few-shot exemplars: 16
+Using internal test set: 47 examples
+Loading model: google/gemma-4-E4B-it
+Model loaded in 14.9s
+
+###############################################################################
+Hábrók Cluster
+Job 29354548 for user s4957075
+Finished at: Sun Jun  7 21:36:31 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 29354548
+Name                           : prompt_llm
+User                           : s4957075
+Partition                      : gpushort
+Nodes                          : v100v2gpu11
+Number of Nodes                : 1
+Cores                          : 1
+Number of Tasks                : 1
+State                          : FAILED  
+Submit                         : 2026-06-07T21:17:15
+Start                          : 2026-06-07T21:21:18
+End                            : 2026-06-07T21:36:27
+Reserved walltime              : 00:30:00
+Used walltime                  : 00:15:09
+Used CPU time                  : 00:13:44 (Efficiency: 90.69%)
+% User (Computation)           : 79.93%
+% System (I/O)                 : 20.07%
+Total memory reserved          : 8G
+Maximum memory used            : 7.62G
+Requested GPUs                 : 1
+Allocated GPUs                 : v100=1
+Max GPU utilization            : 100%
+Max GPU memory used            : 29.69G
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################
