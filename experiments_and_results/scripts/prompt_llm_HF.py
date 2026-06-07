@@ -22,6 +22,7 @@ Examples:
 
 from __future__ import annotations
 
+import gc
 import json
 import random
 from collections import defaultdict
@@ -105,7 +106,7 @@ def load_pipeline(model_name: str, device: str, max_new_tokens: int, cache_dir: 
 
     elapsed = time.time() - start
     print(f"Model loaded in {elapsed:.1f}s")
-    return pipe
+    return pipe, model
 
 
 # ── Parsing ───────────────────────────────────────────────────────────────────
@@ -234,6 +235,26 @@ def parse_args():
 
     return args
 
+ 
+# ── GPU cleanup ───────────────────────────────────────────────────────────────
+ 
+def _cleanup_gpu(pipe, model):
+    """Explicitly free the pipeline and model from GPU memory.
+ 
+    Calling this at the end of main() ensures that CUDA memory is released
+    before the Python process exits, which matters when multiple runs are
+    chained in the same Slurm job step and the driver is slow to reclaim memory.
+    """
+    del pipe
+    del model
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.synchronize()
+        mem_mb = torch.cuda.memory_reserved() / 1024 ** 2
+        print(f"GPU cleanup done — reserved memory after cleanup: {mem_mb:.0f} MB")
+
+
 # ---------------------------------------------------------------------------
 
 def select_fewshot(train_examples, k_per_class: int, seed: int):
@@ -316,7 +337,7 @@ def main():
             gold_labels.append(None)
 
     # ----- HuggingFace inference
-    pipe = load_pipeline(
+    pipe, model = load_pipeline(
         model_name=args.model,
         device=args.device,
         max_new_tokens=args.max_new_tokens,
@@ -370,6 +391,8 @@ def main():
         print(f"Wrote submission → {out_path}")
         print(f"Raw generations  → {raw_log_path}")
 
+# ----- GPU cleanup (important when multiple runs share the same Slurm job)
+    _cleanup_gpu(pipe, model)
 
 if __name__ == "__main__":
     main()
