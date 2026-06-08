@@ -1,0 +1,21 @@
+Scored 47 examples (skipped 0).
+Pred distribution : Counter({'authority': 12, 'natural': 10, 'population': 8, 'slippery_slope': 8, 'hasty_generalization': 5, 'tradition': 4})
+Gold distribution : Counter({'tradition': 7, 'worse_problems': 6, 'hasty_generalization': 6, 'natural': 6, 'authority': 6, 'slippery_slope': 6, 'black-white': 5, 'population': 5})
+
+                      precision    recall  f1-score   support
+
+           authority     0.4167    0.8333    0.5556         6
+         black-white     0.0000    0.0000    0.0000         5
+hasty_generalization     0.8000    0.6667    0.7273         6
+             natural     0.6000    1.0000    0.7500         6
+          population     0.5000    0.8000    0.6154         5
+      slippery_slope     0.6250    0.8333    0.7143         6
+           tradition     1.0000    0.5714    0.7273         7
+      worse_problems     0.0000    0.0000    0.0000         6
+
+            accuracy                         0.5957        47
+           macro avg     0.4927    0.5881    0.5112        47
+        weighted avg     0.5138    0.5957    0.5245        47
+
+Macro F1   : 0.5112
+Weighted F1: 0.5245

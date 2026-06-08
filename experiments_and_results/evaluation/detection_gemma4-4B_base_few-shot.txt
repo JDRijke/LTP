@@ -1,0 +1,15 @@
+Scored 94 examples (skipped 0).
+Pred distribution : Counter({'non-fallacy': 56, 'fallacy': 38})
+Gold distribution : Counter({'non-fallacy': 47, 'fallacy': 47})
+
+              precision    recall  f1-score   support
+
+ non-fallacy     0.5536    0.6596    0.6019        47
+     fallacy     0.5789    0.4681    0.5176        47
+
+    accuracy                         0.5638        94
+   macro avg     0.5663    0.5638    0.5598        94
+weighted avg     0.5663    0.5638    0.5598        94
+
+Macro F1   : 0.5598
+Weighted F1: 0.5598
