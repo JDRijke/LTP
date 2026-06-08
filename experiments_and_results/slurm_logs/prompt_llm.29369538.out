@@ -1,0 +1,73 @@
+=== Job Info ===
+Job: prompt_llm (29369538) on v100v2gpu11
+CUDA_VISIBLE_DEVICES: 0
+Mon Jun  8 12:41:23 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.159.04             Driver Version: 580.159.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           On  |   00000000:AF:00.0 Off |                    0 |
+| N/A   38C    P0             26W /  250W |       0MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Python: /scratch/s4957075/LTP/.venv/bin/python3
+PyTorch version: 2.12.0+cu126
+CUDA available: True
+GPU: Tesla V100-PCIE-32GB
+Using internal test set: 94 examples
+Loading model: google/gemma-3-12b-it
+Model loaded in 38.1s
+Wrote internal evaluation results → llm_results/detection/gemma-3-12b-it/test_internal/base_zero_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 23268 MB
+
+###############################################################################
+Hábrók Cluster
+Job 29369538 for user s4957075
+Finished at: Mon Jun  8 12:46:21 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 29369538
+Name                           : prompt_llm
+User                           : s4957075
+Partition                      : gpushort
+Nodes                          : v100v2gpu11
+Number of Nodes                : 1
+Cores                          : 1
+Number of Tasks                : 1
+State                          : COMPLETED  
+Submit                         : 2026-06-08T12:39:19
+Start                          : 2026-06-08T12:41:21
+End                            : 2026-06-08T12:46:16
+Reserved walltime              : 00:20:00
+Used walltime                  : 00:04:55
+Used CPU time                  : 00:02:05 (Efficiency: 42.39%)
+% User (Computation)           : 75.20%
+% System (I/O)                 : 24.80%
+Total memory reserved          : 16G
+Maximum memory used            : 9.95G
+Requested GPUs                 : 1
+Allocated GPUs                 : v100=1
+Max GPU utilization            : 99%
+Max GPU memory used            : 24.00G
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

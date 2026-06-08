@@ -1,0 +1,110 @@
+=== Job Info ===
+Job: prompt_llm (29369554) on v100v2gpu9
+CUDA_VISIBLE_DEVICES: 0
+Mon Jun  8 12:42:46 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.159.04             Driver Version: 580.159.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           On  |   00000000:18:00.0 Off |                    0 |
+| N/A   33C    P0             26W /  250W |       0MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Python: /scratch/s4957075/LTP/.venv/bin/python3
+PyTorch version: 2.12.0+cu126
+CUDA available: True
+GPU: Tesla V100-PCIE-32GB
+Using internal test set: 94 examples
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Model loaded in 36.5s
+Wrote internal evaluation results → llm_results/detection/Meta-Llama-3.1-8B-Instruct/test_internal/base_zero_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 15338 MB
+Using internal test set: 94 examples
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Model loaded in 15.5s
+Wrote internal evaluation results → llm_results/detection/Meta-Llama-3.1-8B-Instruct/test_internal/enhanced_zero_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 15338 MB
+Few-shot exemplars: 4
+Using internal test set: 94 examples
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Model loaded in 13.8s
+Wrote internal evaluation results → llm_results/detection/Meta-Llama-3.1-8B-Instruct/test_internal/base_few_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 15338 MB
+Few-shot exemplars: 4
+Using internal test set: 94 examples
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Model loaded in 13.4s
+Wrote internal evaluation results → llm_results/detection/Meta-Llama-3.1-8B-Instruct/test_internal/enhanced_few_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 15338 MB
+Using internal test set: 47 examples
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Model loaded in 13.2s
+Wrote internal evaluation results → llm_results/classification/Meta-Llama-3.1-8B-Instruct/test_internal/base_zero_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 15338 MB
+Using internal test set: 47 examples
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Model loaded in 13.4s
+Wrote internal evaluation results → llm_results/classification/Meta-Llama-3.1-8B-Instruct/test_internal/enhanced_zero_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 15338 MB
+Few-shot exemplars: 16
+Using internal test set: 47 examples
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Model loaded in 13.1s
+Wrote internal evaluation results → llm_results/classification/Meta-Llama-3.1-8B-Instruct/test_internal/base_few_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 15338 MB
+Few-shot exemplars: 16
+Using internal test set: 47 examples
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Model loaded in 13.2s
+
+###############################################################################
+Hábrók Cluster
+Job 29369554 for user s4957075
+Finished at: Mon Jun  8 13:11:52 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 29369554
+Name                           : prompt_llm
+User                           : s4957075
+Partition                      : gpushort
+Nodes                          : v100v2gpu9
+Number of Nodes                : 1
+Cores                          : 1
+Number of Tasks                : 1
+State                          : FAILED  
+Submit                         : 2026-06-08T12:42:43
+Start                          : 2026-06-08T12:42:44
+End                            : 2026-06-08T13:11:48
+Reserved walltime              : 00:50:00
+Used walltime                  : 00:29:04
+Used CPU time                  : 00:26:36 (Efficiency: 91.53%)
+% User (Computation)           : 77.82%
+% System (I/O)                 : 22.18%
+Total memory reserved          : 16G
+Maximum memory used            : 9.79G
+Requested GPUs                 : 1
+Allocated GPUs                 : v100=1
+Max GPU utilization            : 100%
+Max GPU memory used            : 31.11G
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

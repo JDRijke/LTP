@@ -1,0 +1,71 @@
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:01<08:25,  1.74s/it]Loading weights:   1%|          | 2/291 [00:02<06:58,  1.45s/it]Loading weights:   5%|▌         | 15/291 [00:03<00:35,  7.71it/s]Loading weights:   8%|▊         | 22/291 [00:03<00:26, 10.27it/s]Loading weights:   9%|▉         | 26/291 [00:03<00:21, 12.28it/s]Loading weights:  10%|█         | 30/291 [00:05<00:51,  5.09it/s]Loading weights:  24%|██▍       | 71/291 [00:05<00:09, 22.02it/s]Loading weights:  29%|██▉       | 85/291 [00:06<00:07, 27.56it/s]Loading weights:  32%|███▏      | 93/291 [00:06<00:08, 23.11it/s]Loading weights:  34%|███▍      | 99/291 [00:07<00:13, 13.88it/s]Loading weights:  45%|████▌     | 132/291 [00:09<00:07, 19.99it/s]Loading weights:  51%|█████     | 149/291 [00:09<00:05, 26.90it/s]Loading weights:  57%|█████▋    | 166/291 [00:09<00:03, 32.93it/s]Loading weights:  60%|█████▉    | 174/291 [00:09<00:04, 27.70it/s]Loading weights:  63%|██████▎   | 184/291 [00:10<00:04, 24.72it/s]Loading weights:  65%|██████▍   | 189/291 [00:11<00:07, 14.40it/s]Loading weights:  68%|██████▊   | 199/291 [00:12<00:06, 14.90it/s]Loading weights:  70%|███████   | 204/291 [00:12<00:05, 16.83it/s]Loading weights:  71%|███████▏  | 208/291 [00:12<00:05, 15.05it/s]Loading weights:  75%|███████▍  | 217/291 [00:13<00:05, 13.19it/s]Loading weights:  82%|████████▏ | 239/291 [00:14<00:03, 15.67it/s]Loading weights:  83%|████████▎ | 242/291 [00:15<00:03, 14.22it/s]Loading weights:  86%|████████▋ | 251/291 [00:15<00:02, 18.70it/s]Loading weights:  98%|█████████▊| 285/291 [00:15<00:00, 38.81it/s]Loading weights: 100%|██████████| 291/291 [00:15<00:00, 18.52it/s]
+[transformers] Passing `generation_config` together with generation-related arguments=({'top_p', 'max_new_tokens', 'temperature', 'pad_token_id', 'top_k', 'do_sample'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] Both `max_new_tokens` (=512) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[transformers] Both `max_new_tokens` (=512) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=512) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Traceback (most recent call last):
+  File "/scratch/s4957075/LTP/experiments_and_results/scripts/prompt_llm_HF.py", line 398, in <module>
+    main()
+  File "/scratch/s4957075/LTP/experiments_and_results/scripts/prompt_llm_HF.py", line 351, in main
+    generations = annotate_batch(
+  File "/scratch/s4957075/LTP/experiments_and_results/scripts/prompt_llm_HF.py", line 158, in annotate_batch
+    for out in pipe(prompts, batch_size=batch_size):
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/pipelines/text_generation.py", line 299, in __call__
+    return super().__call__(text_inputs, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1247, in __call__
+    outputs = list(final_iterator)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 126, in __next__
+    item = next(self.iterator)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 127, in __next__
+    processed = self.infer(item, **self.params)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1165, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/pipelines/text_generation.py", line 403, in _forward
+    output = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, **generate_kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2582, in generate
+    result = decoding_method(
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2782, in _sample
+    outputs = self._prefill(
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 3828, in _prefill
+    return self(**model_inputs, return_dict=True)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/utils/generic.py", line 903, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1032, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+    hidden_states = decoder_layer(
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 93, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 316, in forward
+    hidden_states, _ = self.self_attn(
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 276, in forward
+    attn_output, attn_weights = attention_interface(
+  File "/scratch/s4957075/LTP/.venv/lib/python3.10/site-packages/transformers/integrations/sdpa_attention.py", line 92, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.28 GiB. GPU 0 has a total capacity of 31.73 GiB of which 1.18 GiB is free. Including non-PyTorch memory, this process has 30.54 GiB memory in use. Of the allocated memory 28.68 GiB is allocated by PyTorch, and 1.50 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

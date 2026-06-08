@@ -1,0 +1,84 @@
+=== Job Info ===
+Job: prompt_llm (29369990) on v100v2gpu11
+CUDA_VISIBLE_DEVICES: 0
+Mon Jun  8 13:54:33 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.159.04             Driver Version: 580.159.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           On  |   00000000:AF:00.0 Off |                    0 |
+| N/A   45C    P0             28W /  250W |       0MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Python: /scratch/s4957075/LTP/.venv/bin/python3
+PyTorch version: 2.12.0+cu126
+CUDA available: True
+GPU: Tesla V100-PCIE-32GB
+Using internal test set: 47 examples
+Loading model: google/gemma-3-12b-it
+Model loaded in 32.2s
+Wrote internal evaluation results → llm_results/classification/gemma-3-12b-it/test_internal/base_zero_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 23262 MB
+Using internal test set: 47 examples
+Loading model: google/gemma-3-12b-it
+Model loaded in 25.5s
+Wrote internal evaluation results → llm_results/classification/gemma-3-12b-it/test_internal/enhanced_zero_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 23264 MB
+Few-shot exemplars: 16
+Using internal test set: 47 examples
+Loading model: google/gemma-3-12b-it
+Model loaded in 27.2s
+Wrote internal evaluation results → llm_results/classification/gemma-3-12b-it/test_internal/base_few_shot_results.jsonl
+GPU cleanup done — reserved memory after cleanup: 23296 MB
+
+###############################################################################
+Hábrók Cluster
+Job 29369990 for user s4957075
+Finished at: Mon Jun  8 14:48:38 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 29369990
+Name                           : prompt_llm
+User                           : s4957075
+Partition                      : gpushort
+Nodes                          : v100v2gpu11
+Number of Nodes                : 1
+Cores                          : 1
+Number of Tasks                : 1
+State                          : COMPLETED  
+Submit                         : 2026-06-08T13:54:30
+Start                          : 2026-06-08T13:54:31
+End                            : 2026-06-08T14:48:34
+Reserved walltime              : 01:00:00
+Used walltime                  : 00:54:03
+Used CPU time                  : 00:49:12 (Efficiency: 91.02%)
+% User (Computation)           : 75.06%
+% System (I/O)                 : 24.94%
+Total memory reserved          : 16G
+Maximum memory used            : 12.56G
+Requested GPUs                 : 1
+Allocated GPUs                 : v100=1
+Max GPU utilization            : 100%
+Max GPU memory used            : 31.09G
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################
